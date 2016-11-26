@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   get '/signup' do
     if logged_in?
-      redirect to '/todos'
+      redirect to '/admin'
     else
       erb :'users/create_user'
     end
@@ -15,12 +15,33 @@ class UsersController < ApplicationController
       @user = User.create(params)
       @user.save
       session[:user_id] = @user.id
-      redirect to '/todos'
+      redirect to '/admin'
     end
   end
 
-  get '/todos' do
-    erb :'todos'
+  post '/login' do
+    @user = User.find_by(username: params[:username])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect to '/admin'
+    else
+      redirect to '/signup'
+    end
   end
+
+  get '/admin' do
+   erb :'users/admin'
+  end
+
+  get '/signout' do
+    if logged_in?
+      session.clear
+      redirect to '/'
+    else
+      redirect to '/'
+    end
+  end
+
+
 
 end
