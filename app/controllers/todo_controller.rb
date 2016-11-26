@@ -29,7 +29,7 @@ class TodosController < ApplicationController
   get '/todos/:id' do
     if logged_in?
       @todo = Todo.find_by_id(params[:id])
-      erb :'todos/edit_todo'
+      erb :'todos/show_todo'
     else
       redirect to '/login'
     end
@@ -54,6 +54,17 @@ class TodosController < ApplicationController
       @todo.content = params[:content]
       @todo.save
       redirect to "/todos/#{@todo.id}"
+    end
+  end
+
+  get '/todos/:id/delete' do
+    if logged_in?
+      @todo = Todo.find_by_id(params[:id])
+      if current_user.id == @todo.user_id
+        erb :'/todos/edit_todo'
+      end
+    else
+      redirect to '/'
     end
   end
 
