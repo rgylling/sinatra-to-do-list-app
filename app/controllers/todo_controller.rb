@@ -26,10 +26,10 @@ class TodosController < ApplicationController
     end
   end
 
-  get '/tweets/:id' do
+  get '/todos/:id' do
     if logged_in?
       @todo = Todo.find_by_id(params[:id])
-      erb :'todos/single_todo'
+      erb :'todos/edit_todo'
     else
       redirect to '/login'
     end

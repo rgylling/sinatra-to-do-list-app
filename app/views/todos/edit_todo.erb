@@ -3,13 +3,7 @@
     <div class="col-md-4 col-md-offset-4 col-sm-12 bg-white">
       <div>
         <h1 class="log-in text-center"><%="#{current_user.username}'s todos"%></h1>
-        <% @todos.each do |todo| %>
-          <ul>
-            <li>
-              <a style="color: #70c1b3; font-size:18px; font-weight:200;" class="to-do" href="/todos/<%= todo.id %>"><%=todo.content%></a>
-            </li>
-          </ul>
-        <% end %>
+
       </div>
     </div>
   </div>
