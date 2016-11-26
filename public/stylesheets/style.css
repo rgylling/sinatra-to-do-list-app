@@ -1,9 +1,17 @@
+html {
+  height:100%;
+}
+
 body {
 background: #ff9068;
 background: -webkit-linear-gradient(45deg, #fd746c, #ff9068);
 background: linear-gradient(45deg, #fd746c, #ff9068);
-font-family: 'Varela Round', sans-serif;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif
 color: #2E2E2E;
+}
+
+.color-white {
+  color:white;
 }
 
 .bg-white {
@@ -29,4 +37,19 @@ color: #2E2E2E;
   height: 50px;
   margin-bottom: 25px;
   font-size:16px;
+}
+
+.welcome {
+  font-weight:100;
+  font-size: 45px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.welcome span {
+  font-weight:bold;
+}
+
+.log-in {
+  font-weight:200;
 }
