@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3 col-sm-12 bg-white">
+    <div class="col-md-4 col-md-offset-4 col-sm-12 bg-white">
 
       <nav class="navbar navbar-default">
         <div class="navbar-header">
@@ -23,11 +23,12 @@
 
       <div>
         <h1 class="log-in text-center"><%="#{current_user.username.capitalize}'s todos"%></h1>
+        <hr>
         <% @todos.each do |todo| %>
           <ul style="border-bottom:solid 1px #f1f1f1">
-            <li>
-              <a style="color: #44635d; font-size:18px; font-weight:200; line-height:2.5" class="to-do" href="/todos/<%= todo.id %>"><%=todo.content%></a>
-              <div style="float:right; margin-top:5px;" class="btn-group" role="group" aria-label="...">
+            <li style="overflow-x: auto;">
+              <a style="color: #44635d; font-size:18px; font-weight:200; line-height:2" class="to-do" href="/todos/<%= todo.id %>"><%=todo.content%></a>
+              <div style="float:right;" class="btn-group" role="group" aria-label="...">
                 <a href="todos/<%= todo.id %>/edit"><button style="font-weight:100;border:none;background-color: #70c1bd; color:white" type="button" class="btn btn-default">Edit</button></a>
                 <a href="todos/<%= todo.id %>/delete"><button style="font-weight:100;border:none;background-color:#ff7650; color:white" type="button" class="btn btn-default">Delete</button></a>
               </div>

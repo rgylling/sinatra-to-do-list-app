@@ -17,6 +17,7 @@ color: #2E2E2E;
 .bg-white {
   background-color:white;
   border-radius:7px;
+  margin-bottom:50px;
 }
 
 .form-control.btn-main {
@@ -83,6 +84,7 @@ color: #2E2E2E;
 
 .log-in {
   font-weight:200;
+  color: #3e3c3c;
 }
 
 a:focus, a:hover {
@@ -126,4 +128,10 @@ a:focus, a:hover {
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
     color: #fff;
     background-color: #ff8a69;
+}
+
+hr {
+    width: 50%;
+    margin-top: -15px;
+    border-color: #b1b1b1;
 }
