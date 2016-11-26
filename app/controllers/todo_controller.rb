@@ -46,4 +46,15 @@ class TodosController < ApplicationController
     end
   end
 
+  patch '/todos/:id' do
+    if params[:content].empty?
+      redirect to "/todos/#{params[:id]}/edit"
+    else
+      @todo = Todo.find_by_id(params[:id])
+      @todo.content = params[:content]
+      @todo.save
+      redirect to "/todos/#{@todo.id}"
+    end
+  end
+
 end
