@@ -1,12 +1,32 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 col-sm-12 bg-white">
+
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/todos">View All Todos</a></li>
+            <li><a href="/todos/new">New Todo</a></li>
+            <li><a href="/signout">Sign Out</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
       <div>
-        <h1 class="log-in text-center"><%="#{current_user.username}'s todos"%></h1>
+        <h1 class="log-in text-center"><%="#{current_user.username.capitalize}'s todos"%></h1>
         <% @todos.each do |todo| %>
-          <ul>
+          <ul style="border-bottom:solid 1px #f1f1f1">
             <li>
-              <a style="color: #48c7b1; font-size:18px; font-weight:200; line-height:2.5" class="to-do" href="/todos/<%= todo.id %>"><%=todo.content%></a>
+              <a style="color: #44635d; font-size:18px; font-weight:200; line-height:2.5" class="to-do" href="/todos/<%= todo.id %>"><%=todo.content%></a>
               <div style="float:right; margin-top:5px;" class="btn-group" role="group" aria-label="...">
                 <a href="todos/<%= todo.id %>/edit"><button style="font-weight:100;border:none;background-color: #70c1bd; color:white" type="button" class="btn btn-default">Edit</button></a>
                 <a href="todos/<%= todo.id %>/delete"><button style="font-weight:100;border:none;background-color:#ff7650; color:white" type="button" class="btn btn-default">Delete</button></a>

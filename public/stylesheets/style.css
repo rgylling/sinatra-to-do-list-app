@@ -118,3 +118,12 @@ a:focus, a:hover {
     background-color:transparent;
     border-color:transparent;
 }
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: whitesmoke;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: #ff8a69;
+}

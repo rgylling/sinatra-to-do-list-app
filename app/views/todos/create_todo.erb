@@ -1,8 +1,28 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-md-offset-4 col-sm-12 text-center bg-white">
+    <div class="col-md-4 col-md-offset-4 col-sm-12 bg-white">
+
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/todos">View All Todos</a></li>
+            <li><a href="/todos/new">New Todo</a></li>
+            <li><a href="/signout">Sign Out</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
       <div>
-        <h1 class="log-in">Create your todo</h1>
+        <h1 class="text-center log-in">Create your todo</h1>
         <form method="POST" action="/todos">
           <input type="text" name="content" class="form-control" placeholder="Type todo here!" aria-describedby="sizing-addon2" required>
           <input type="submit" class="form-control text-center btn-main" value="Submit!" aria-describedby="sizing-addon2">
