@@ -35,4 +35,15 @@ class TodosController < ApplicationController
     end
   end
 
+  get '/todos/:id/edit' do
+    if logged_in?
+      @todo = Todo.find_by_id(params[:id])
+      if current_user.id == @todo.user_id
+        erb :'/todos/edit_todo'
+      end
+    else
+      redirect to '/'
+    end
+  end
+
 end
