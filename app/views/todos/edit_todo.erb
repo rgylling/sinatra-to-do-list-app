@@ -9,7 +9,7 @@
           <input type="submit" class="form-control text-center btn-main" value="Submit Edit!" aria-describedby="sizing-addon2">
         </form>
 
-        <form method="POST" action="/tweets/<%=@todo.id%>/delete">
+        <form method="POST" action="/todo/<%=@todo.id%>/delete">
           <input type="hidden" name="_method" value="DELETE">
           <input type="submit" class="form-control text-center btn-delete btn-main" value="Delete todo!" aria-describedby="sizing-addon2">
         </form>

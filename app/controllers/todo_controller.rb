@@ -57,6 +57,17 @@ class TodosController < ApplicationController
     end
   end
 
-  
+  delete '/todo/:id/delete' do
+    if logged_in?
+      @todo = Todo.find_by_id(params[:id])
+      if current_user.id == @todo.user_id
+        @todo.delete
+        redirect to '/todos'
+      end
+    else
+      redirect to '/'
+    end
+  end
+
 
 end
