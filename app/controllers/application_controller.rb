@@ -2,7 +2,6 @@ require './config/environment'
 
 class ApplicationController < Sinatra::Base
 
-  register Sinatra::Twitter::Bootstrap::Assets
 
   configure do
   set :public_folder, 'public'
