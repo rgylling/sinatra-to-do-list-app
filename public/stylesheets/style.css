@@ -58,6 +58,12 @@ color: #2E2E2E;
   margin-top:25px;
 }
 
+.btn-delete.form-control.btn-main {
+  background-color:#ff7650;
+  border-bottom: 2px solid #da5d3b;
+  box-shadow: inset 0 -2px #da5d3b;
+}
+
 .form-control {
   height: 50px;
   margin-bottom: 25px;
@@ -87,9 +93,4 @@ a:focus, a:hover {
 .to-do {
   color: #70C1B3;
   font-size:16px;
-}
-
-.dropdown {
-  display: inline;
-float: right;
 }

@@ -8,6 +8,11 @@
           <input type="text" name="content" class="form-control" placeholder="What's your username?" aria-describedby="sizing-addon2" required value="<%=@todo.content%>">
           <input type="submit" class="form-control text-center btn-main" value="Submit Edit!" aria-describedby="sizing-addon2">
         </form>
+
+        <form method="POST" action="/tweets/<%=@todo.id%>/delete">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" class="form-control text-center btn-delete btn-main" value="Delete todo!" aria-describedby="sizing-addon2">
+        </form>
       </div>
     </div>
   </div>
