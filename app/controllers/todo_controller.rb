@@ -1,3 +1,3 @@
-class TodoController < ApplicationController
+class TodosController < ApplicationController
 
 end
