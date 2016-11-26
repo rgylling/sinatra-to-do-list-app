@@ -83,3 +83,8 @@ a:focus, a:hover {
   color: #507384;
   text-decoration: none;
 }
+
+.to-do {
+  color: #70C1B3;
+  font-size:16px;
+}

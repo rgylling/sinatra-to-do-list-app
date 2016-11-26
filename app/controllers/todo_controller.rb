@@ -18,8 +18,21 @@ class TodosController < ApplicationController
   end
 
   post '/todos' do
+    if params[:content].empty?
+      redirect to 'todos/new'
+    else
+      todo =Todo.create(content: params[:content], user_id: current_user.id)
+      redirect to '/todos'
+    end
+  end
 
-
+  get '/tweets/:id' do
+    if logged_in?
+      @todo = Todo.find_by_id(params[:id])
+      erb :'todos/single_todo'
+    else
+      redirect to '/login'
+    end
   end
 
 end
