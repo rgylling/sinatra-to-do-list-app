@@ -26,8 +26,8 @@
           <li>
             <a style="color: #44635d; font-size:18px; font-weight:200; line-height:2" class="to-do" href="/todos/<%= @todo.id %>"><%=@todo.content%></a>
             <div style="float:right; margin-top:5px;" class="btn-group" role="group" aria-label="...">
-              <a href="todos/<%= @todo.id %>/edit"><button style="font-weight:100;border:none;background-color: #70c1bd; color:white" type="button" class="btn btn-default">Edit</button></a>
-              <a href="todos/<%= @todo.id %>/delete"><button style="font-weight:100;border:none;background-color:#ff7650; color:white" type="button" class="btn btn-default">Delete</button></a>
+              <a href="/todos/<%= @todo.id %>/edit"><button style="font-weight:100;border:none;background-color: #70c1bd; color:white" type="button" class="btn btn-default">Edit</button></a>
+              <a href="/todos/<%= @todo.id %>/delete"><button style="font-weight:100;border:none;background-color:#ff7650; color:white" type="button" class="btn btn-default">Delete</button></a>
             </div>
           </li>
         </ul>

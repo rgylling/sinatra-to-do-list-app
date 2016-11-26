@@ -135,3 +135,17 @@ hr {
     margin-top: -15px;
     border-color: #b1b1b1;
 }
+
+.navbar-default .navbar-nav>li>a {
+    color: #44635d;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+ul {
+  padding-left:0px;
+}
+
+li {
+  list-style-type:none;
+}
