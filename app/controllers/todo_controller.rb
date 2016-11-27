@@ -79,6 +79,4 @@ class TodosController < ApplicationController
       redirect to '/'
     end
   end
-
-
 end
