@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   post '/signup' do
     if params.any?{|key, val| val.empty?}
-      redirect to '/signup'
+      redirect to '/error'
     else
       @user = User.create(params)
       @user.save
@@ -25,8 +25,12 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect to '/admin'
     else
-      redirect to '/signup'
+      redirect to '/error'
     end
+  end
+
+  get '/error' do
+    erb :'error'
   end
 
   get '/admin' do
@@ -41,5 +45,5 @@ class UsersController < ApplicationController
       redirect to '/'
     end
   end
-  
+
 end
