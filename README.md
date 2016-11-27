@@ -1,4 +1,3 @@
-Simple CRUD MVC To Do List App
 # Sinatra todo list app
 
 Sinatra todo list app is a simple MVC CRUD application using ActiveRecord with Sinatra. This is a basic to do list app where you can add edit and delete todos.
