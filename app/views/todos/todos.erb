@@ -23,7 +23,7 @@
       <div>
         <h1 class="log-in text-center"><%="#{current_user.username.capitalize}'s todos"%></h1>
         <hr>
-        <% @todos.each do |todo| %>
+        <% @user.todos.each do |todo| %>
           <ul style="border-bottom:solid 1px #f1f1f1">
             <li style="overflow-x: auto;">
               <a style="color: #44635d; font-size:18px; font-weight:200; line-height:2" class="to-do" href="/todos/<%= todo.id %>"><%=todo.content%></a>

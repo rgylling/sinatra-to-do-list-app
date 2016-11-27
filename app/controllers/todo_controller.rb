@@ -2,7 +2,7 @@ class TodosController < ApplicationController
 
   get '/todos' do
     if logged_in?
-      @todos = Todo.all
+      @user = User.find(current_user.id)
       erb :'todos/todos'
     else
       redirect to '/'
